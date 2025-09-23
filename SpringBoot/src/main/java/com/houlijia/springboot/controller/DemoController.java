@@ -1,4 +1,4 @@
-package com.houlijia.springbootvue.controller;
+package com.houlijia.springboot.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

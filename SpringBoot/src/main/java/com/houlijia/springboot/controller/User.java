@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.houlijia.springbootvue.controller;
+package com.houlijia.springboot.controller;
 
 /**
  * @author <a href="mailto:chenxilzx1@gmail.com">theonefx</a>

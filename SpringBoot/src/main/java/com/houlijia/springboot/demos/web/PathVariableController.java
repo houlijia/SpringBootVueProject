@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.houlijia.springbootvue.demos.web;
+package com.houlijia.springboot.demos.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

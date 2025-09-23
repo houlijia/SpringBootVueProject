@@ -1,10 +1,10 @@
-package com.houlijia.springbootvue;
+package com.houlijia.Springboot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringbootvueApplicationTests {
+class SpringbootApplicationTests {
 
     @Test
     void contextLoads() {

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.houlijia.springbootvue.demos.web;
+package com.houlijia.springboot.demos.web;
 
-import com.houlijia.springbootvue.controller.User;
+import com.houlijia.springboot.controller.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
