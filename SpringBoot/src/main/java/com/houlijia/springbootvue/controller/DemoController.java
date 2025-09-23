@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
     //@GetMapping(value = "/hello")
     // 两个用法等价
-    // http://localhost:8081/hello?name=%E5%BC%A0%E4%B8%89&phone=123
+    // http://localhost:8088/hello?name=zhangsan&phone=123456789
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello(String name, String phone) {
         System.out.println(phone);
@@ -25,11 +25,12 @@ public class DemoController {
     默认情况下，@RestController注解会将返回值直接转换为JSON格式，
     因此我们不需要再使用@ResponseBody注解
      */
-    //@RequestMapping("/user")
-    //public User getUser() {
-    //    User user = new User();
-    //    user.setName("houlijia");
-    //    user.setAge(25);
-    //    return user;
-    //}
+    @GetMapping("/user")
+    public User getUser() {
+        User user = new User();
+        user.setName("testname");
+        user.setAge(25);
+        return user;
+    }
+    // 输出: {"name":"testname","age":25}
 }
