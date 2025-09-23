@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 public class ParamsController {
     @RequestMapping(value = "/getTest1",method = RequestMethod.GET)
     public String getTest1(){
-        return "GET请求";
+        return "GET请求1";
     }
 
     @RequestMapping(value = "/getTest2",method = RequestMethod.GET)
@@ -18,7 +18,7 @@ public class ParamsController {
     public String getTest2(String nickname,String phone){
         System.out.println("nickname"+nickname);
         System.out.println("phone"+phone);
-        return "GET请求";
+        return "GET请求2";
     }
 
     @RequestMapping(value = "/getTest3",method = RequestMethod.GET)
@@ -26,25 +26,25 @@ public class ParamsController {
     public String getTest3(@RequestParam(value = "nickname",required = false)String name){
         /*@RequestParam可以进行参数映射，当请求参数名称与Controller的方法参数不一致时，可以如上所示进行注解，但会使得该参数是必须的，可以加上required = false使得该参数可选（传递与否都可以）*/
         System.out.println("nickname:"+name);
-        return "GET请求";
+        return "GET请求3";
     }
 
     @RequestMapping(value = "/postTest1",method = RequestMethod.POST)
     public String postTest1(){
-        return "POST请求";
+        return "POST请求1";
     }
 
     @RequestMapping(value = "/postTest2",method = RequestMethod.POST)
     public String postTest2(String username,String password){
         System.out.println("username:"+username);
         System.out.println("password:"+password);
-        return "POST请求";
+        return "POST请求2";
     }
 
     @RequestMapping(value = "/postTest3",method = RequestMethod.POST)
     public String postTest3(User user){
         System.out.println(user);
-        return "POST请求";
+        return "POST请求3";
     }
 
     @RequestMapping(value = "/postTest4",method = RequestMethod.POST)
@@ -57,7 +57,7 @@ public class ParamsController {
      * 如果把password的引号去掉，就变成数字类型而非字符串类型，没有一致*/
     public String postTest4(@RequestBody User user){
         System.out.println(user);
-        return "POST请求";
+        return "POST请求4";
     }
 
     @GetMapping("/test/**")
