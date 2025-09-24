@@ -8,10 +8,20 @@ import java.math.BigInteger;
  * @Desc
  **/
 public class Products {
+
+    private int id;
     private String name;
-    private BigInteger age;
-    private BigInteger height;
-    private BigInteger weight;
+    private int age;
+    private int height;
+    private int weight;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -21,34 +31,35 @@ public class Products {
         this.name = name;
     }
 
-    public BigInteger getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(BigInteger age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
-    public BigInteger getHeight() {
+    public int getHeight() {
         return height;
     }
 
-    public void setHeight(BigInteger height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
-    public BigInteger getWeight() {
+    public int getWeight() {
         return weight;
     }
 
-    public void setWeight(BigInteger weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
     @Override
     public String toString() {
-        return "MysqlUser{" +
-                "name='" + name + '\'' +
+        return "Products{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", age=" + age +
                 ", height=" + height +
                 ", weight=" + weight +
