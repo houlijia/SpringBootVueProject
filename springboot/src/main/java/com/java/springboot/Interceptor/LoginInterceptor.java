@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  * @Desc
  **/
 public class LoginInterceptor implements HandlerInterceptor {
-    @Override
+    //@Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler){
         System.out.println("HandlerInterceptor");
         return true;

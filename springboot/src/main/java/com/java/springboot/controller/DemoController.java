@@ -1,10 +1,17 @@
 package com.java.springboot.controller;
 
+
+import com.java.springboot.entity.Products;
 import com.java.springboot.entity.User;
+import com.java.springboot.mapper.MysqlProductsMapper;
+import com.java.springboot.mapper.MysqlProductsMapper2;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @Author houlijia
@@ -37,4 +44,23 @@ public class DemoController {
     }
     // 输出: {"name":"testname","age":25}
 
+    // mybatis 用法
+    @Autowired
+    private MysqlProductsMapper MysqlProductsMapper;
+    @GetMapping("/querymysql")
+    public List<Products> queryMysql() {
+        List<Products> userlist = MysqlProductsMapper.getAll();
+        System.out.println(userlist.toString());
+        return userlist;
+    }
+
+    // mybatis-plugs 用法
+    @Autowired
+    private MysqlProductsMapper2 MysqlProductsMapper2;
+    @GetMapping("/querymysql2")
+    public List<Products> query2() {
+        List<Products> userlist = MysqlProductsMapper2.selectList(null);
+        System.out.println(userlist.toString());
+        return userlist;
+    }
 }
