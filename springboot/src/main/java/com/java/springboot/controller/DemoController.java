@@ -6,10 +6,7 @@ import com.java.springboot.entity.User;
 import com.java.springboot.mapper.MysqlProductsMapper;
 import com.java.springboot.mapper.MysqlProductsMapper2;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -62,5 +59,16 @@ public class DemoController {
         List<Products> userlist = MysqlProductsMapper2.selectList(null);
         System.out.println(userlist.toString());
         return userlist;
+    }
+
+    @PostMapping("/adddata")
+    public String save(Products data){
+        int i = MysqlProductsMapper2.insert(data);
+        System.out.println(data);
+        if(i>0){
+            return "add data successfully ";
+        }else {
+            return "add data error ";
+        }
     }
 }

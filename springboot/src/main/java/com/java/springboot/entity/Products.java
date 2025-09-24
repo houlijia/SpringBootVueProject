@@ -1,5 +1,9 @@
 package com.java.springboot.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.math.BigInteger;
 
 /**
@@ -7,8 +11,11 @@ import java.math.BigInteger;
  * @Date 2025-09-24 15:23
  * @Desc
  **/
+// 如果表名和class名不一致的话
+@TableName("products")
 public class Products {
-
+    //加上之后，插入数据之后，会自带上id
+    @TableId(type= IdType.AUTO)
     private int id;
     private String name;
     private int age;
