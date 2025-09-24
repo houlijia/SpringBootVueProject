@@ -1,6 +1,7 @@
 package com.java.springboot.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -17,6 +18,8 @@ public class Products {
     //加上之后，插入数据之后，会自带上id
     @TableId(type= IdType.AUTO)
     private int id;
+    // 如果表里面叫nickname，传入字段是name，使用@TableField做映射
+    //@TableField("nickname")
     private String name;
     private int age;
     private int height;
