@@ -1,4 +1,4 @@
-package com.java.springboot.controller;
+package com.java.springboot.entity;
 
 /**
  * @Author houlijia

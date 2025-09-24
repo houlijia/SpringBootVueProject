@@ -1,5 +1,6 @@
 package com.java.springboot.controller;
 
+import com.java.springboot.entity.User;
 import org.springframework.web.bind.annotation.*;
 
 /**
